@@ -1,0 +1,30 @@
+.city-choices {
+  padding-top: 15px;
+  width: 200px;
+  height: 1000px;
+  margin-top: -2px;
+  border-right: 2px solid #222;
+}
+
+.city-option {
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.hvr-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-shrink:hover, .hvr-shrink:focus, .hvr-shrink:active {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+  cursor: pointer;
+}
+

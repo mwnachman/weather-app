@@ -1,0 +1,15 @@
+.search {
+  margin-left: 15px;
+  margin-top: 40px;
+}
+
+p {
+  margin-bottom: 2px;
+}
+
+input {
+  height: 24px;
+  padding-left: 5px;
+  width: 160px;
+  font-size: 14px;
+}
