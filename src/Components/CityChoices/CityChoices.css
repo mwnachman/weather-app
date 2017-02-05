@@ -1,9 +1,11 @@
 .city-choices {
   padding-top: 15px;
   width: 200px;
-  height: 1000px;
+  /*height: 1000px;*/
+  vertical-align: top;
   margin-top: -2px;
-  border-right: 2px solid #222;
+  /*border-right: 2px solid #222;*/
+  display: inline-block;
 }
 
 .city-option {

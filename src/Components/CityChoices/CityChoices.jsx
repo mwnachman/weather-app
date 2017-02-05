@@ -12,7 +12,6 @@ import './CityChoices.css';
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user,
     weather: state.weather
   };
 };
@@ -20,9 +19,6 @@ const mapStateToProps = (state) => {
 const matchDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               selectCity: selectCity
-                              // youWonAction: youWonAction,
-                              // computerMove: computerMoveAction,
-                              // selectSquare: selectSquareAction
                              }, dispatch);
 };
  

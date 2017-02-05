@@ -1,0 +1,26 @@
+.chosen-city-today {
+  /*display: block;*/
+  width: 16em;
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+/*.current-data {
+  display: block;
+}*/
+
+.high-low {
+  /*display: inline-block;*/
+  width: 6em;
+}
+
+.today-img {
+/*  display: inline-block;*/
+  margin-top: -5em;  
+  float: right;
+  height: 5em;
+}

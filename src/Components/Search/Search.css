@@ -13,3 +13,9 @@ input {
   width: 160px;
   font-size: 14px;
 }
+
+.example-text {
+  font-size: 10px;
+  margin-top: 4px;
+  margin-left: 3px;
+}

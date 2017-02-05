@@ -1,11 +1,21 @@
 export const createInitialWeatherState = (cities) => {
+  let city = localStorage.getItem('city', city);
+  let state = localStorage.getItem('state', state);
   let citiesArray = [];
-  for (var i = 0; i < cities.length; i++) {
-    var tempObj = {};
-    for (var key in cities[i]) {
-      tempObj[key] = cities[i][key];
+  if (city && state) {
+    citiesArray[0] = {};
+    citiesArray[0]['city'] = city;
+    citiesArray[0]['state'] = state;
+  }
+  for (let i = 0; i < cities.length; i++) {
+    if (cities[i]['city'] !== citiesArray[0]['city']
+        && cities[i]['state'] !== citiesArray[0]['state']) {
+      let tempObj = {};
+      for (let key in cities[i]) {
+          tempObj[key] = cities[i][key];
+        }
+      citiesArray.push(tempObj);
     }
-    citiesArray.push(tempObj);
   }
   return citiesArray;
 }
@@ -63,6 +73,12 @@ export const convertDate = (dateToConvert) => {
   return formattedDate.join(' ');
 }
 
+export const convertDateWithoutYear = (dateToConvert) => {
+  let newDate = convertDate(dateToConvert);
+  let dateWithoutYearArray = newDate.split(',');
+  return dateWithoutYearArray[0];
+}
+
 export const createData = (response, city, state) => {
   let res = response.data.query.results.channel.item;
   let data = {};
@@ -76,34 +92,20 @@ export const createData = (response, city, state) => {
   data.today.date = day + date;
   data.today.currentTemp = res.condition.temp;
   data.today.currentCondition = res.condition.text;
+  data.today.currentConditionPicture = res.condition.text.split(' ').join('');
   data.forecastNext10 = [];
-  for (let i = 0; i < res.forecast.length; i++) {
+  for (let i = 1; i < res.forecast.length; i++) {
     let dayInfo = {};
     let fcst = res.forecast[i];
     dayInfo.low = fcst.low;
     dayInfo.high = fcst.high;
-    let date = convertDate(fcst.date);
+    let date = convertDateWithoutYear(fcst.date);
     let day = convertDayName(fcst.day);
     dayInfo.date = day + date;
     dayInfo.condition = fcst.text;
+    dayInfo.conditionPicture = dayInfo.condition.split(' ').join('');
     data.forecastNext10.push(dayInfo);
   }
   return data;
 }
 
-
-
-// export const createInitialWeatherState = (cities) => {
-//   let citiesObj = {};
-//   for (var i = 0; i < cities.length; i++) {
-//     citiesObj[cities[i]['city']] = {};
-//     console.log('citiesObj', citiesObj);
-//     for (var key in cities[i]) {
-//       console.log('temp obj cities i', citiesObj[cities[i]['city']]);
-//       console.log('key', key);
-//       citiesObj[cities[i]['city']][key] = cities[i][key];
-//     }
-//   }
-//   return citiesObj;
-// }
-//  

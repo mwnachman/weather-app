@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import Search from '../Search';
-// import { selectCity } from '../../Actions/weather';
-// import { youWonAction } from '../../actions/user';
-// import { checkForWin, findMove } from '../../helpers/weatherLogic';
+
 import './FutureDay.css';
 
-// const xImage = require('../../assets/X.png');
-// const oImage = require('../../assets/O.png');
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user,
     weather: state.weather
   };
 };
@@ -20,9 +14,6 @@ const mapStateToProps = (state) => {
 const matchDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               // selectCity: selectCity
-                              // youWonAction: youWonAction,
-                              // computerMove: computerMoveAction,
-                              // selectSquare: selectSquareAction
                              }, dispatch);
 };
  
@@ -31,8 +22,15 @@ class FutureDay extends Component {
 
   render () {
     return (
-      <div className="city-choices">
-          
+      <div className="future-day">
+        <p>{this.props.day.date}</p>
+        <p>{this.props.day.condition}</p>
+        <p>High: {this.props.day.high} &deg;F</p>
+        <p>Low: {this.props.day.low} &deg;F</p>
+        <div> 
+          <img src={require(`../../Assets/${this.props.day.conditionPicture}.png`)} 
+          role='presentation' className='future-day-img'/>
+        </div>
       </div>
     )
   }
