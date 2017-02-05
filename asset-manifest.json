@@ -1,7 +1,22 @@
 {
-  "main.css": "static/css/main.a0dd89fe.css",
-  "main.css.map": "static/css/main.a0dd89fe.css.map",
-  "main.js": "static/js/main.fc225ca0.js",
-  "main.js.map": "static/js/main.fc225ca0.js.map",
-  "static/media/sun.png": "static/media/sun.65bd2ded.png"
+  "main.css": "static/css/main.7326a500.css",
+  "main.css.map": "static/css/main.7326a500.css.map",
+  "main.js": "static/js/main.45a092c3.js",
+  "main.js.map": "static/js/main.45a092c3.js.map",
+  "static/media/Breezy.png": "static/media/Breezy.80b169d9.png",
+  "static/media/Clear.png": "static/media/Clear.18813e6b.png",
+  "static/media/Cloudy.png": "static/media/Cloudy.23ea9126.png",
+  "static/media/MostlyClear.png": "static/media/MostlyClear.9f895a59.png",
+  "static/media/MostlyCloudy.png": "static/media/MostlyCloudy.87ba0490.png",
+  "static/media/MostlySunny.png": "static/media/MostlySunny.1948d6e3.png",
+  "static/media/PartlyCloudy.png": "static/media/PartlyCloudy.87ba0490.png",
+  "static/media/Rain.png": "static/media/Rain.e7aed115.png",
+  "static/media/RainAndSnow.png": "static/media/RainAndSnow.eb3b92f5.png",
+  "static/media/ScatteredShowers.png": "static/media/ScatteredShowers.e580d081.png",
+  "static/media/ScatteredThunderstorms.png": "static/media/ScatteredThunderstorms.566fbd62.png",
+  "static/media/Showers.png": "static/media/Showers.e7aed115.png",
+  "static/media/Snow.png": "static/media/Snow.ca4f1e0e.png",
+  "static/media/Sunny.png": "static/media/Sunny.65bd2ded.png",
+  "static/media/Thunderstorms.png": "static/media/Thunderstorms.566fbd62.png",
+  "static/media/Windy.png": "static/media/Windy.80b169d9.png"
 }
