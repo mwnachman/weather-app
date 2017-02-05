@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const matchDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               selectCity: selectCity
                              }, dispatch);
@@ -42,7 +42,7 @@ class CityChoices extends Component {
   }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(CityChoices);
+export default connect(mapStateToProps, mapDispatchToProps)(CityChoices);
 
 
 

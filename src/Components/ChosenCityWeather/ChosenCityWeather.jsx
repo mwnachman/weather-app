@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const matchDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               // checkWin: checkForWin,
                              }, dispatch);
@@ -31,4 +31,4 @@ class ChosenCityWeather extends Component {
   }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(ChosenCityWeather);
+export default connect(mapStateToProps, mapDispatchToProps)(ChosenCityWeather);

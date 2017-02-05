@@ -18,7 +18,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const matchDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               findCity: findCity,
                               findCityByZip: findCityByZip
@@ -75,7 +75,7 @@ class Search extends Component {
   }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
 
 
 

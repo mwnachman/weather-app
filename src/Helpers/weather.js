@@ -1,20 +1,29 @@
 export const createInitialWeatherState = (cities) => {
-  let city = localStorage.getItem('city', city) || null;
-  let state = localStorage.getItem('state', state) || null;
   let citiesArray = [];
-  if (city && state) {
+  if (JSON.parse(localStorage.getItem('city')) !== null 
+      && JSON.parse(localStorage.getItem('state')) !== null) {
+    let city = JSON.parse(localStorage['city']) ? localStorage.getItem('city', city) : null;
+    let state = JSON.parse(localStorage['state']) ? localStorage.getItem('state', state) : null;
     citiesArray[0] = {};
     citiesArray[0]['city'] = city;
     citiesArray[0]['state'] = state;
-  }
-  for (let i = 0; i < cities.length; i++) {
-    if (cities[i]['city'] !== citiesArray[0]['city']
-        && cities[i]['state'] !== citiesArray[0]['state']) {
+  };
+  for (let i = citiesArray.length; i < cities.length; i++) {
+    if (i === 0) {
       let tempObj = {};
       for (let key in cities[i]) {
           tempObj[key] = cities[i][key];
         }
       citiesArray.push(tempObj);
+    } else {
+      if (cities[i]['city'] !== citiesArray[0]['city']
+          && cities[i]['state'] !== citiesArray[0]['state']) {
+        let tempObj = {};
+        for (let key in cities[i]) {
+            tempObj[key] = cities[i][key];
+          }
+        citiesArray.push(tempObj);
+      }
     }
   }
   return citiesArray;

@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const matchDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               selectCity: selectCity
                              }, dispatch);
@@ -51,7 +51,7 @@ class Today extends Component {
   }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(Today);
+export default connect(mapStateToProps, mapDispatchToProps)(Today);
 
 
 

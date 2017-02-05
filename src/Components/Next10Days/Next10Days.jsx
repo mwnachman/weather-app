@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const matchDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
     //NEED THIS????????????????????????????????
                              }, dispatch);
@@ -35,7 +35,7 @@ class Next10Days extends Component {
   }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(Next10Days);
+export default connect(mapStateToProps, mapDispatchToProps)(Next10Days);
 
 
 

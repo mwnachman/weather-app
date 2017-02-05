@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const matchDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ 
                               // selectCity: selectCity
                              }, dispatch);
@@ -36,7 +36,7 @@ class FutureDay extends Component {
   }
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(FutureDay);
+export default connect(mapStateToProps, mapDispatchToProps)(FutureDay);
 
 
 
