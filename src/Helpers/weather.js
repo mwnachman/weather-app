@@ -1,6 +1,6 @@
 export const createInitialWeatherState = (cities) => {
-  let city = localStorage.getItem('city', city);
-  let state = localStorage.getItem('state', state);
+  let city = localStorage.getItem('city', city) || null;
+  let state = localStorage.getItem('state', state) || null;
   let citiesArray = [];
   if (city && state) {
     citiesArray[0] = {};
