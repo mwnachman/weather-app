@@ -8,11 +8,15 @@
   height: 100px;
 }*/
 
-.App-header {
+.headroom {
   background-color: #222;
-  height: 3em;
+  height: 4em;
   padding: 1em;
   color: rgb(95, 246, 243);
+}
+
+.headroom--scrolled {
+  transition: transform 1000ms ease-in-out;
 }
 /*
 .header-contents {

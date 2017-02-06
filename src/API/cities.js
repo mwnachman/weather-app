@@ -1,23 +1,14 @@
 export default [
   { 
-    "city": "Austin",
-    "state": "TX"
-  }, {
-    "city": "Chicago",
-    "state": "IL"
-  }, {
-    "city": "Detroit",
-    "state": "MI"
-  }, {
-    "city": "Los Angeles",
+    "city": "Mountain View",
     "state": "CA"
-  }, {
-    "city": "Miami",
-    "state": "FL"
   }, {
     "city": "New York",
     "state": "NY"
-  }, {
+  }, { 
+    "city": "Palo Alto",
+    "state": "CA"
+  },{
     "city": "Portland",
     "state": "OR"
   }, {
