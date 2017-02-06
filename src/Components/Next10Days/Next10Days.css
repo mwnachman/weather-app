@@ -3,3 +3,14 @@
   display: block;
   position: absolute;
 }
+
+@media only screen and (min-width: 666px) {
+  .next-10-days {
+ /*   vertical-align: top;
+    display: inline-block;*/
+    max-width: 34em;
+    /*position: relative;*/
+    display: inline-block;
+    float: right;
+  }
+}

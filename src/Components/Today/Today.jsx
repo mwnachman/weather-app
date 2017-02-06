@@ -31,10 +31,10 @@ class Today extends Component {
           <div>
             <div className="chosen-city-today">
               <div className="current-data">
-                <h2>{weatherToday.city}, {weatherToday.state}</h2>
-                <h3>{weatherToday.today.date}</h3>
-                <h2>Currently: {weatherToday.today.currentTemp} &deg;F</h2>
-                <h2>{weatherToday.today.currentCondition}</h2>
+                <h2 className="today-h2">{weatherToday.city}, {weatherToday.state}</h2>
+                <h3 className="today-h3">{weatherToday.today.date}</h3>
+                <h2 className="today-h2">Currently: {weatherToday.today.currentTemp} &deg;F</h2>
+                <h2 className="today-h2">{weatherToday.today.currentCondition}</h2>
               </div>
               <div className='high-low'>
                 <div>High: {weatherToday.today.high} &deg;F</div>

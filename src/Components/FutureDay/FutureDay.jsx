@@ -14,14 +14,15 @@ const mapStateToProps = (state) => {
 class FutureDay extends Component {
 
   render () {
+    const { day } = this.props;
     return (
       <div className="future-day">
-        <p>{this.props.day.date}</p>
-        <p>{this.props.day.condition}</p>
-        <p>High: {this.props.day.high} &deg;F</p>
-        <p>Low: {this.props.day.low} &deg;F</p>
+        <p className="future-p">{day.date}</p>
+        <p className="future-p">{day.condition}</p>
+        <p className="future-p">High: {day.high} &deg;F</p>
+        <p className="future-p">Low: {day.low} &deg;F</p>
         <div> 
-          <img src={require(`../../Assets/${this.props.day.conditionPicture}.png`)} 
+          <img src={require(`../../Assets/${day.conditionPicture}.png`)} 
           role='presentation' className='future-day-img'/>
         </div>
       </div>

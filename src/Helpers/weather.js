@@ -39,7 +39,7 @@ export const convertDayName = (day) => {
   } else if ( day === 'Thu' ) {
     return 'Thursday, ';
   } else if ( day === 'Fri' ) {
-    return 'Friday, , ';
+    return 'Friday, ';
   } else if ( day === 'Sat' ) {
     return 'Saturday, ';
   } else if ( day === 'Sun' ) {
@@ -50,8 +50,7 @@ export const convertDayName = (day) => {
 export const convertDate = (dateToConvert) => {
   let formattedDate = [];
   let date = dateToConvert.split(' ');
-  // console.log('date', date);
-  let ordinal;
+  var ordinal = [];
   if ( date[0] === '01' ) {
     ordinal = '1st,';
   } else if ( date[0] === '02' ) {
@@ -72,7 +71,9 @@ export const convertDate = (dateToConvert) => {
     if ( date[0][0] === '0' ) {
       ordinal = date[0].split('').slice(1).concat('th,').join('');
     } else {
-      ordinal = date + 'th,';
+      ordinal = date[0].split('');
+      ordinal[2] = 'th,';
+      ordinal = ordinal.join('');
     }
   }
   formattedDate.push(date[1]);
@@ -102,7 +103,7 @@ export const createData = (response, city, state) => {
   data.today.currentCondition = res.condition.text;
   data.today.currentConditionPicture = res.condition.text.split(' ').join('');
   data.forecastNext10 = [];
-  for (let i = 1; i < res.forecast.length; i++) {
+  for (let i = 0; i < res.forecast.length; i++) {
     let dayInfo = {};
     let fcst = res.forecast[i];
     dayInfo.low = fcst.low;
