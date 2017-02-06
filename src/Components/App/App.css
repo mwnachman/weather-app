@@ -58,6 +58,8 @@
 .city-options-nav {
   display: inline-block;
   position: absolute;
+  top: 0px;
+  right: 0px;
   float: right;
   width: 10em;
   margin-right: -3em;
