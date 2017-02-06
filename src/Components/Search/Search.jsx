@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import Search from '../Search';
 import { findCity, findCityByZip } from '../../Actions/weather';
-// import { youWonAction } from '../../actions/user';
-// import { serializeForm }  from '../../Helpers/form';
-// import { checkForWin, findMove } from '../../helpers/weatherLogic';
+import { parseCityName } from '../../Helpers/weather';
+
 import './Search.css';
 
-// const xImage = require('../../assets/X.png');
-// const oImage = require('../../assets/O.png');
 
 const mapStateToProps = (state) => {
   return {
-    // user: state.user,
     weather: state.weather
   };
 };
@@ -31,28 +26,11 @@ class Search extends Component {
   // ADD AN EVENT HANDLER TO CLEAR THE TEXT OF THE INPUT
 
   findCity(city) {
-    // console.log('city', city);
-    // let data = serializeForm(e);
     if ( parseInt(city) === Number(city) ) {
       this.props.findCityByZip(city);
     } else {
-      let cityArray = city.split(',');
-      // console.log('city array', cityArray);
-      let cityName = cityArray[0];
-      let state = cityArray[1];
-      let cityWords = cityName.toLowerCase().split(' ');
-      for (let i = 0; i < cityWords.length; i++) {
-        let cityWordLetterArray = cityWords[i].split('');
-        // console.log('citywordletterarray', cityWordLetterArray);
-        cityWordLetterArray[0] = cityWordLetterArray[0].toUpperCase();
-        // console.log('citywordletterarray', cityWordLetterArray);
-        cityWords[i] = cityWordLetterArray.join('');
-      }
-      city = cityWords.join(' ');
-      // console.log('state', state);
-      let stateName = state.split('').slice(1).join('').toUpperCase();
-      // console.log('statename', stateName);
-      this.props.findCity(city, stateName); 
+      let parsedCity = parseCityName(city);
+      this.props.findCity(parsedCity[0], parsedCity[1]); 
     }
   }
 

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import FutureDay from '../FutureDay';
 
 import './Next10Days.css';
@@ -12,12 +11,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ 
-    //NEED THIS????????????????????????????????
-                             }, dispatch);
-};
- 
 
 class Next10Days extends Component {
 
@@ -35,7 +28,7 @@ class Next10Days extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Next10Days);
+export default connect(mapStateToProps)(Next10Days);
 
 
 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from '../../Assets/sun.png';
 import Headroom from 'react-headroom';
 import Search from '../Search';
 import CityChoices from '../CityChoices';

@@ -24,23 +24,24 @@ class Today extends Component {
   }
 
   render () {
+    const { weatherToday } = this.props;
     return (
       <div>
-        {!!this.props.weatherToday.forecastNext10 && 
+        {!!weatherToday.forecastNext10 && 
           <div>
             <div className="chosen-city-today">
               <div className="current-data">
-                <h2>{this.props.weatherToday.city}, {this.props.weatherToday.state}</h2>
-                <h3>{this.props.weatherToday.today.date}</h3>
-                <h2>Currently: {this.props.weatherToday.today.currentTemp} &deg;F</h2>
-                <h2>{this.props.weatherToday.today.currentCondition}</h2>
+                <h2>{weatherToday.city}, {weatherToday.state}</h2>
+                <h3>{weatherToday.today.date}</h3>
+                <h2>Currently: {weatherToday.today.currentTemp} &deg;F</h2>
+                <h2>{weatherToday.today.currentCondition}</h2>
               </div>
               <div className='high-low'>
-                <div>High: {this.props.weatherToday.today.high} &deg;F</div>
-                <div>Low: {this.props.weatherToday.today.low} &deg;F</div>
+                <div>High: {weatherToday.today.high} &deg;F</div>
+                <div>Low: {weatherToday.today.low} &deg;F</div>
               </div>
               <div> 
-                <img src={require(`../../Assets/${this.props.weatherToday.today.currentConditionPicture}.png`)} 
+                <img src={require(`../../Assets/${weatherToday.today.currentConditionPicture}.png`)} 
                 role='presentation' className='today-img'/>
               </div>
             </div>

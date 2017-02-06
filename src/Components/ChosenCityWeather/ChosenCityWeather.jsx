@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import Today from '../Today';
 import Next10Days from '../Next10Days';
 import './ChosenCityWeather.css';
 
 const mapStateToProps = (state) => {
   return {
-    // user: state.user,
     weather: state.weather
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ 
-                              // checkWin: checkForWin,
-                             }, dispatch);
-};
- 
 
 class ChosenCityWeather extends Component {
 
@@ -31,4 +23,4 @@ class ChosenCityWeather extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChosenCityWeather);
+export default connect(mapStateToProps)(ChosenCityWeather);

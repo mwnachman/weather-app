@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import './FutureDay.css';
 
@@ -9,12 +8,6 @@ const mapStateToProps = (state) => {
   return {
     weather: state.weather
   };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ 
-                              // selectCity: selectCity
-                             }, dispatch);
 };
  
 
@@ -36,7 +29,7 @@ class FutureDay extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(FutureDay);
+export default connect(mapStateToProps)(FutureDay);
 
 
 

@@ -1,46 +1,25 @@
-/*.App {
-  text-align: center;
-}
-*/
-/*.App-logo {
-  display: inline-block;
-  animation: App-logo-spin infinite 20s linear;
-  height: 100px;
-}*/
-
 .headroom {
   background-color: #222;
   height: 12em;
-  /*width: 40em;*/
-  /*padding: 1em;*/
-  /*color: rgb(95, 246, 243);*/
+  min-width: 30em;
   color: rgb(255, 255, 255);
 }
 
 .headroom--scrolled {
   transition: transform 1500ms ease-in-out;
 }
-/*
-.header-contents {
-  width: 500px;
-  vertical-align: top;
-}*/
 
 .left-header {
   display: inline-block;
   float: left;
 }
 
-
-
 .weather-header {
   display: inline-block;
-  /*width: 10em;*/
   color: rgb(95, 246, 243);
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 2.9em;
   float: left;
-  /*height: 2em;*/
   vertical-align: top;
   margin-top: 0.5em;
   margin-left: 0.3em;
@@ -49,24 +28,14 @@
 
 .search-nav {
   display: inline-block;
-  /*vertical-align: top;*/
   float: left;
-  /*margin-top: -10em;*/
-  /*color: rgb(255, 255, 255);*/
 }
 
 .city-options-nav {
   display: inline-block;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  position: top right;
   float: right;
   width: 10em;
   margin-right: -3em;
   vertical-align: top;
 }
-
-/*@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/

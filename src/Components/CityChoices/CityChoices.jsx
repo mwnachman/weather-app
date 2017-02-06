@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Search from '../Search';
 import { selectCity } from '../../Actions/weather';
-// import { youWonAction } from '../../actions/user';
-// import { checkForWin, findMove } from '../../helpers/weatherLogic';
+
 import './CityChoices.css';
 
 

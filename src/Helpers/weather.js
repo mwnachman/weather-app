@@ -2,7 +2,6 @@ export const createInitialWeatherState = (cities) => {
   let citiesArray = [];
   if (localStorage.getItem('city') === null 
       && localStorage.getItem('state') === null) {
-    console.log('null');
     for (let i = 0; i < cities.length; i++) {
       let tempObj = {};
         for (let key in cities[i]) {
@@ -51,7 +50,7 @@ export const convertDayName = (day) => {
 export const convertDate = (dateToConvert) => {
   let formattedDate = [];
   let date = dateToConvert.split(' ');
-  console.log('date', date);
+  // console.log('date', date);
   let ordinal;
   if ( date[0] === '01' ) {
     ordinal = '1st,';
@@ -79,7 +78,6 @@ export const convertDate = (dateToConvert) => {
   formattedDate.push(date[1]);
   formattedDate.push(ordinal);
   formattedDate.push(date[2]);
-  // console.log('formatted Date', formattedDate);
   return formattedDate.join(' ');
 }
 
@@ -119,3 +117,17 @@ export const createData = (response, city, state) => {
   return data;
 }
 
+export const parseCityName = (city) => {
+  let cityArray = city.split(',');
+  let cityName = cityArray[0];
+  let state = cityArray[1];
+  let cityWords = cityName.toLowerCase().split(' ');
+  for (let i = 0; i < cityWords.length; i++) {
+    let cityWordLetterArray = cityWords[i].split('');
+    cityWordLetterArray[0] = cityWordLetterArray[0].toUpperCase();
+    cityWords[i] = cityWordLetterArray.join('');
+  }
+  city = cityWords.join(' ');
+  let stateName = state.split('').slice(1).join('').toUpperCase();
+  return [city, stateName];
+}

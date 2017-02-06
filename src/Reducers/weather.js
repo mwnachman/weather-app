@@ -3,13 +3,6 @@ import cities from '../API/cities';
 
 const initialWeatherState = createInitialWeatherState(cities);
 
-// const initialCitiesArray = createCitiesArray(cities);
-// const city = localStorage.getItem('city', city);
-// const state = localStorage.getItem('state', state);
-// const initialWeatherState = {};
-// initialWeatherState['locations'] = initialCitiesArray;
-// initialWeatherState['chosenLocation'] = {city: city, state: state};
-
 const WeatherReducer = (state =  
   initialWeatherState
 , action) => {
@@ -20,9 +13,8 @@ const WeatherReducer = (state =
     let stateAfterSelect = state.slice(index + 1); 
     return city.concat(stateBeforeSelect).concat(stateAfterSelect);
   } else if ( action.type === 'ADD_CITY' ) {
-    console.log('in ADD_CITY');
     let exists = false;
-    for (var i = 0; i < state.length; i++) {
+    for (let i = 0; i < state.length; i++) {
       if ( action.payload.city.toLowerCase() === state[i].city.toLowerCase() 
            && action.payload.state.toLowerCase() === state[i].state.toLowerCase() ) {
         exists = true;
@@ -31,7 +23,6 @@ const WeatherReducer = (state =
     if (exists) {
       return state;
     } else {
-      console.log('in new location add');
       let newLocation = action.payload.location;
       newLocation['state'] = action.payload.state;
       newLocation['city'] = action.payload.city;
@@ -40,7 +31,6 @@ const WeatherReducer = (state =
       return newLocation.concat(stateBeforeAdd);
     }
   } else if ( action.type === 'FETCH_REJECTED') {
-    console.log('in FETCH_REJECTED', action.payload);
     return state;
   } else {
     return state;
