@@ -36,7 +36,6 @@ class CityChoices extends Component {
               </div>
             </div>)
           )}
-          <Search />
       </div>
     )
   }
