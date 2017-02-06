@@ -16,7 +16,7 @@
   height: 3em;
 }
 
-@media only screen and (device-width: 667px) {
+@media all and (orientation:landscape) {
   .future-day {
     height: 5.5em;
     float: right;
@@ -36,3 +36,30 @@
     margin-top: -1em;
   }
 }
+
+@media all and (min-device-width:700px) {
+  .future-day {
+    display: inline-block;
+    float: left;
+    margin: 0.5em;
+    margin-left: 1em;
+    margin-right: -0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    width: 12em;
+    height: 9em;
+  }
+  .future-p {
+    font-size: 1em;
+    margin-bottom: -0.3em;
+  }
+  .future-day-img {
+    margin-top: -3em;  
+    float: right;
+    height: 3em;
+  }
+}
+
+
+

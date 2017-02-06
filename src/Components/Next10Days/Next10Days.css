@@ -2,11 +2,19 @@
   margin-left: 0.3em;
 }
 
-@media only screen and (device-width: 667px) {
+@media all and (orientation:landscape), and (max-device-width:400px) {
   .next-10-days {
     max-width: 34em;
     display: inline-block;
     position: absolute;
     float: right;
+  }
+}
+
+@media all and (min-device-width:668px) {
+  .next-10-days {
+    max-width: 70em;
+    display: inline-block;
+    position: relative;
   }
 }
