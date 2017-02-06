@@ -36,7 +36,7 @@ const WeatherReducer = (state =
       newLocation['state'] = action.payload.state;
       newLocation['city'] = action.payload.city;
       newLocation = [newLocation];
-      let stateBeforeAdd = state;
+      let stateBeforeAdd = state.slice(0, 6);
       return newLocation.concat(stateBeforeAdd);
     }
   } else if ( action.type === 'FETCH_REJECTED') {

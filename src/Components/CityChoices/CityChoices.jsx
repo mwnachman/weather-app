@@ -7,8 +7,6 @@ import { selectCity } from '../../Actions/weather';
 // import { checkForWin, findMove } from '../../helpers/weatherLogic';
 import './CityChoices.css';
 
-// const xImage = require('../../assets/X.png');
-// const oImage = require('../../assets/O.png');
 
 const mapStateToProps = (state) => {
   return {

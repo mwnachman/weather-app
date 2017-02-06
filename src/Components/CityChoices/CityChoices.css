@@ -1,9 +1,10 @@
 .city-choices {
   padding-top: 15px;
-  width: 200px;
+  width: 9em;
   /*height: 1000px;*/
   vertical-align: top;
   margin-top: -2px;
+  float: right;
   /*border-right: 2px solid #222;*/
   display: inline-block;
 }
@@ -11,6 +12,8 @@
 .city-option {
   margin-top: 5px;
   margin-left: 15px;
+  font-size: 0.8em;
+  /*margin-left: 5em;*/
 }
 
 .hvr-shrink {
