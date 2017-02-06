@@ -1,13 +1,12 @@
 .next-10-days {
   margin-left: 0.3em;
-  display: block;
-  position: absolute;
 }
 
-@media only screen and (min-width: 666px) {
+@media only screen and (max-device-width: 667px) {
   .next-10-days {
     max-width: 34em;
     display: inline-block;
+    position: absolute;
     float: right;
   }
 }
