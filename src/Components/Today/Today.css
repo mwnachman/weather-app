@@ -1,5 +1,4 @@
 .chosen-city-today {
-  /*display: block;*/
   width: 16em;
   border: 2px solid black;
   margin-left: 20px;
@@ -10,12 +9,10 @@
 }
 
 .high-low {
-  /*display: inline-block;*/
   width: 6em;
 }
 
 .today-img {
-/*  display: inline-block;*/
   margin-top: -5em;  
   float: right;
   height: 5em;
@@ -31,7 +28,6 @@
     padding-left: 0.3em;
     padding-right: 0.3em;
     padding-bottom: 0.3em;
-    /*vertical-align: top;  */
   }
   .today-h2 {
     font-size: 1em;
