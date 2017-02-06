@@ -2,7 +2,7 @@
   margin-left: 0.3em;
 }
 
-@media only screen and (max-device-width: 667px) {
+@media only screen and (device-width: 667px) {
   .next-10-days {
     max-width: 34em;
     display: inline-block;

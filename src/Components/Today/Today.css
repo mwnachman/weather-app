@@ -31,7 +31,7 @@
   height: 5em;
 }
 
-@media only screen and (max-device-width: 667px) {
+@media only screen and (device-width: 667px) {
   .city-state {
     display: inline-block;
     margin-bottom: -1em;
