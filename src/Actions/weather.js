@@ -51,7 +51,6 @@ export const findCity = (city, state) => {
 }
 
 export const findCityByZip = (data) => {
-  console.log('data in find city', data);
   let url = config.url + data;
   let city = '';
   let state = '';

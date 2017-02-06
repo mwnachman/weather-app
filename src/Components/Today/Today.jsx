@@ -36,13 +36,13 @@ class Today extends Component {
                 <h2 className="today-h2">Currently: {weatherToday.today.currentTemp} &deg;F</h2>
                 <h2 className="today-h2">{weatherToday.today.currentCondition}</h2>
               </div>
-              <div className='high-low'>
+              <div className="high-low">
                 <div>High: {weatherToday.today.high} &deg;F</div>
                 <div>Low: {weatherToday.today.low} &deg;F</div>
               </div>
               <div> 
                 <img src={require(`../../Assets/${weatherToday.today.currentConditionPicture}.png`)} 
-                role='presentation' className='today-img'/>
+                alt="" className="today-img"/>
               </div>
             </div>
             <h1 className="city-state-today">{weatherToday.city}, {weatherToday.state}</h1>

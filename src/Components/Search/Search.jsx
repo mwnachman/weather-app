@@ -38,7 +38,7 @@ class Search extends Component {
   }
 
   findCity(city) {
-    if ( parseInt(city) === Number(city) ) {
+    if ( parseInt(city, 10) === Number(city) ) {
       this.props.findCityByZip(city);
       this.setState({ city: '' });
     } else {

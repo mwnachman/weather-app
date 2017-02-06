@@ -23,7 +23,7 @@ class FutureDay extends Component {
         <p className="future-p">Low: {day.low} &deg;F</p>
         <div> 
           <img src={require(`../../Assets/${day.conditionPicture}.png`)} 
-          role='presentation' className='future-day-img'/>
+          alt="" className="future-day-img"/>
         </div>
       </div>
     )

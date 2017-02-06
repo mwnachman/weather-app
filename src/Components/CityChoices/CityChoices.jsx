@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Search from '../Search';
 import { selectCity } from '../../Actions/weather';
 
 import './CityChoices.css';
