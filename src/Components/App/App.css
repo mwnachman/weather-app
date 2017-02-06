@@ -17,7 +17,7 @@
 }
 
 .headroom--scrolled {
-  transition: transform 1000ms ease-in-out;
+  transition: transform 1500ms ease-in-out;
 }
 /*
 .header-contents {
