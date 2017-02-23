@@ -5,5 +5,8 @@ export default {
     // The API is Yahoo Weather: developer.yahoo.com/weather
     // Sign in and get your API key and secret
   key: 'KEY_GOES_HERE',
-  secret: 'SECRET_GOES_HERE'
+  secret: 'SECRET_GOES_HERE',
+
+  // Ziptastic API -- for getting city corresponding to zip code
+  url: 'https://ziptasticapi.com/'
 };
